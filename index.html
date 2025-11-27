@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manželské poradenství</title>
+
+    <!-- Moderní font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            background: #110e0ecc;
+            color: #ffffff;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: #0e0c0ca9;
+        }
+
+        header img {
+            width: 230px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #d4af37; /* Zlatá */
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+            color: #e7e7e7;
+        }
+
+        /* MENU */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #111;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            padding: 18px 30px;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #222;
+            color: #d4af37;
+        }
+
+        /* OBSAH */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: auto;
+            margin-top: 30px;
+            background: #111;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        h2, h3 {
+            color: #d4af37;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+        /* SKRYVÁNÍ ZÁLOŽEK */
+        .tab { display: none; }
+        .tab.active { display: block; }
+    </style>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <img src="logo.png" alt="Logo poradenství">
+    <h1>Manželské poradenství</h1>
+    <p>Ztratili jste v manželství jiskru, porozumění nebo chuť mluvit?  
+    Pomůžeme vám slyšet jeden druhého – a najít cestu zpět k lásce.</p>
+</header>
+
+<nav>
+    <a onclick="showTab('sluzby')">Naše služby</a>
+    <a onclick="showTab('doba')">Otevírací doba</a>
+    <a onclick="showTab('cenik')">Ceník</a>
+    <a onclick="showTab('kontakty')">Kontakty</a>
+    <a onclick="showTab('onas')">O nás</a>
+</nav>
+
+<style>
+
+    /* ... tvoje ostatní styly ... */
+
+    .btn {
+        display: inline-block;
+        padding: 12px 28px;
+        margin-top: 20px;
+        background-color: #d4af37;
+        color: black;
+        font-weight: 700;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        transition: 0.3s;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #b8922c;
+        transform: scale(1.05);
+    }
+
+</style>
+
+
+<div class="container">
+
+    <!-- 1. Záložka -->
+    <div id="sluzby" class="tab active">
+        <h2>Naše služby</h2>
+        <p>Každý pár si zaslouží péči. Nabízíme poradenství pro páry i jednotlivce, kteří chtějí porozumět svým emocím, obnovit důvěru nebo najít cestu dál.</p>
+        <ul>
+            <li>Individuální a párové konzultace</li>
+            <li>Pomoc při nevěře a ztrátě důvěry</li>
+            <li>Komunikační koučing – naučte se znovu mluvit, naslouchat a chápat</li>
+            <li>Podpora při rozchodu nebo rozhodování, zda zůstat spolu</li>
+            <li>Emoční terapie a práce s konflikty</li>
+            <li>Prevence krizí – jak si udržet zdravý a naplněný vztah</li>
+        </ul>
+    </div>
+
+    <!-- 2. Záložka -->
+    <div id="doba" class="tab">
+        <h2>Otevírací doba</h2>
+        <p>Předpokládaná pracovní doba bude stanovena dle potřeb klientů, zejména v odpoledních a podvečerních hodinách.</p>
+        <ul>
+            <li>Pondělí – 13:00–20:00</li>
+            <li>Úterý – 13:00–20:00</li>
+            <li>Středa – 13:00–20:00</li>
+            <li>Čtvrtek – 13:00–20:00</li>
+            <li>Pátek – 13:00–20:00</li>
+            <li>Sobota – Zavřeno</li>
+            <li>Neděle – Zavřeno</li>
+        </ul>
+    </div>
+
+    <!-- 3. Záložka -->
+    <div id="cenik" class="tab">
+        <h2>Ceník</h2>
+        <p>(Ceník doplníš, až bude připravený.)</p>
+    </div>
+
+    <!-- 4. Záložka -->
+    <div id="kontakty" class="tab">
+        <h2>Kontakty</h2>
+        <p><strong>Tel:</strong> +420 778 573 322</p>
+        <p><strong>E-mail:</strong> manzelskeporadenstvi@email.cz</p>
+        <p><strong>Adresa:</strong> Líšnice 74, Mohelnice 789 85</p>
+
+        <h3>Objednat se</h3>
+        <p>Můžete se objednat telefonicky nebo nám napsat na email. Domluvíme si s vámi termín, který vám bude vyhovovat.</p>
+    </div>
+    <a class="btn" onclick="showTab('form')">Přejít na objednávkový formulář</a>
+<div id="form" class="tab">
+    <h2>Objednat se</h2>
+
+    <form action="mailto:manzelskeporadenstvi@email.cz" method="post" enctype="text/plain">
+        <div class="form-group">
+            <label for="email">Váš email:</label>
+            <input type="email" id="email" name="Email" placeholder="např. jan.novak@gmail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="zprava">Vaše zpráva:</label>
+            <textarea id="zprava" name="Zpráva" placeholder="Napište nám, o co máte zájem..." required></textarea>
+        </div>
+
+        <button class="btn" type="submit">Odeslat objednávku</button>
+    </form>
+</div>
+
+
+    <!-- 5. Záložka -->
+    <div id="onas" class="tab">
+        <h2>O nás</h2>
+        <p>Jmenuji se <strong>Veronika Frantová</strong> a poskytuji psychologické poradenství a diagnostiku na základě živnostenského podnikání.</p>
+        <p>Mám vystudovanou vysokou školu se zaměřením na Psychologii. Ráda pomáhám druhým a chci předávat své schopnosti dál – naslouchat, podporovat a ukazovat nové cesty.</p>
+        <p>Manželství hraje v životě člověka velkou roli. Mnoho vztahů končí zbytečně, protože partneři nevědí, jak řešit problémy. Mé poradenství může vztahy zachránit a posílit.</p>
+        <p>Věřím, že každý si zaslouží partnerskou lásku a že právě ta dělá náš život lepší.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
